@@ -61,7 +61,8 @@
     flex-wrap:no-wrap;
     justify-content:space-between;
   }
-  		</pre>
+
+</pre>
  
  		<row class="cbui-debug-outline">
         	<span>First element auto-aligns left</span>
@@ -82,7 +83,70 @@
         	<span>First element auto-aligned right</span>
             <span>Second element auto-aligned right</span>
  		</row>
+        <p class="cbui-margin-top2"><strong>How about a collection of form fields?</strong></p>
         
+        <div style="width:500px;"> <!-- arbitrary wrapper for width -->
+        <row>
+        <label>Field Number One 
+        <input type="text"></label>
+        <label>Field Number Two 
+        <input type="text"></label>
+        </row>
+        <row>
+        <label>Field Number Three 
+        <input type="text" placeholder="I'm a placeholder"></label>
+        <label>Field Number Four 
+        <input type="text"></label>
+        </row>
+        <row class="cbui-align-left">
+        <label class="cbui-cursor-pointer">
+        <input type="checkbox"> Checking me!</label>
+        <label class="cbui-cursor-pointer">
+        <input type="checkbox"> Noog, check me!</label>
+        <label class="cbui-cursor-pointer">
+        <input type="checkbox"> I'm the best!</label>
+        </row>
+        </div>
+    <p><strong>HTML Markup</strong></p>
+        <pre>
+  &lt;row&gt;
+  &lt;label&gt;Field Number One 
+  &lt;input type=&quot;text&quot;&gt;&lt;/label&gt;
+  &lt;label&gt;Field Number Two 
+  &lt;input type=&quot;text&quot;&gt;&lt;/label&gt;
+  &lt;/row&gt;
+  &lt;row&gt;
+  &lt;label&gt;Field Number Three 
+  &lt;input type=&quot;text&quot; placeholder=&quot;I&#39;m a placeholder&quot;&gt;&lt;/label&gt;
+  &lt;label&gt;Field Number Four 
+  &lt;input type=&quot;text&quot;&gt;&lt;/label&gt;
+  &lt;/row&gt;
+  &lt;row class=&quot;cbui-align-left&quot;&gt;
+  &lt;label class=&quot;cbui-cursor-pointer&quot;&gt;
+  &lt;input type=&quot;checkbox&quot;&gt; Checking me!&lt;/label&gt;
+  &lt;label class=&quot;cbui-cursor-pointer&quot;&gt;
+  &lt;input type=&quot;checkbox&quot;&gt; Noog, check me!&lt;/label&gt;
+  &lt;label class=&quot;cbui-cursor-pointer&quot;&gt;
+  &lt;input type=&quot;checkbox&quot;&gt; I&#39;m the best!&lt;/label&gt;
+  &lt;/row&gt;
+        </pre>
+   <p><strong>CSS</strong></p>
+    <pre>
+  input[type=&quot;text&quot;] {
+  display: block;
+  }
+  
+  label {
+  margin-right:1.5rem;
+  }
+  label.cbui-cursor-pointer {
+  cursor:pointer;
+  }
+  input[type=&quot;checkbox&quot;], input[type=&quot;radio&quot;] {
+  cursor:pointer;
+  height:.9rem;
+  }
+    </pre>    
     </section>
     
 </main>
