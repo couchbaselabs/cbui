@@ -78,7 +78,7 @@ html, button, input, select, textarea {
 }
 body {
   background-color: #fff;
-  color: #222;
+  color: #000;
 }
 
 
@@ -140,6 +140,11 @@ h4 {
 	margin: 0.25rem 0;
 } 
 
+code, pre {
+	font-family: Monaco, Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier New", monospace;
+	font-size:.8rem;
+	}
+
 /* Links Base Style ------------------------------ */
 a:active,
 a:hover {
@@ -166,6 +171,7 @@ a:active {
 .disabled_link {
 	color: rgba(60,122,194,.60);
 	}
+	
 /* OTHER ELEMENTS
 ---------------------------------------------------------------------- */
 ul {
@@ -186,8 +192,16 @@ nav {
 	padding:0 1.5rem;
 }
 header {
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
 	display:flex; 
+	-webkit-flex-wrap:no-wrap; 
+	-ms-flex-wrap:no-wrap; 
 	flex-wrap:no-wrap;
+	-webkit-box-pack:start;
+	-webkit-justify-content:flex-start;
+	-ms-flex-pack:start;
 	justify-content:flex-start; 	
 	align-items: center; /* this is really "vertical-align:middle" since the default axis is horizontal */
 	-webkit-box-align: center;
@@ -198,10 +212,19 @@ header {
 	color:#fff;
 }
 main {
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
 	display:flex; 
+	-webkit-flex-wrap:no-wrap; 
+	-ms-flex-wrap:no-wrap; 
 	flex-wrap:no-wrap; 
+	-webkit-box-align:start; 
+	-webkit-align-items:flex-start; 
+	-ms-flex-align:start; 
 	align-items:flex-start;
 	padding: 1.5rem;
+	margin: 0 0 40px 0;
 }
 nav,
 header,
@@ -211,23 +234,39 @@ main
 	max-width:1600px;
 	}
 menu {
-	flex:0 0 160px; 
+	-webkit-box-flex:0;
+	-webkit-flex:0 0 160px;
+	    -ms-flex:0 0 160px;
+	        flex:0 0 160px; 
 	border-left:1px solid #ddd; 
 	padding:0 0 0 1rem;
 	margin: 0 1.5rem 0 -1rem;
 	}
 section {
-	flex: 1 1 auto; 
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 auto;
+	    -ms-flex: 1 1 auto;
+	        flex: 1 1 auto;
+	margin: 0  0 2rem 0; 
 	}
 row {
 	padding: .4rem 0;
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
 	display:flex;
 	min-height: 1rem;
 	-webkit-box-align:center;
 	-webkit-align-items:center;
-	align-items:center;
-	flex-wrap:no-wrap;
-	justify-content:space-between;
+	-ms-flex-align:center;
+	    align-items:center;
+	-webkit-flex-wrap:no-wrap;
+	    -ms-flex-wrap:no-wrap;
+	        flex-wrap:no-wrap;
+	-webkit-box-pack:justify;
+	-webkit-justify-content:space-between;
+	    -ms-flex-pack:justify;
+	        justify-content:space-between;
 	}
 	
 footer {
@@ -247,17 +286,74 @@ footer {
 	border: 1px dashed red;
 	}
 
-.cbui-column50 {
-	flex: 1 0 50%;
+.cbui-column20 {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 20%;
+	    -ms-flex: 1 0 20%;
+	        flex: 1 0 20%;
 	}	
 
-row.align-right {
-	justify-content:flex-end;
+.cbui-column30 {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 30%;
+	    -ms-flex: 1 0 30%;
+	        flex: 1 0 30%;
+	}
+
+.cbui-column40 {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 40%;
+	    -ms-flex: 1 0 40%;
+	        flex: 1 0 40%;
+	}
+
+.cbui-column50 {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 50%;
+	    -ms-flex: 1 0 50%;
+	        flex: 1 0 50%;
+	}
+
+.cbui-column60 {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 60%;
+	    -ms-flex: 1 0 60%;
+	        flex: 1 0 60%;
+	}
+
+.cbui-column70 {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 70%;
+	    -ms-flex: 1 0 70%;
+	        flex: 1 0 70%;
+	}
+
+row.cbui-align-right {
+	-webkit-box-pack:end;
+	-webkit-justify-content:flex-end;
+	    -ms-flex-pack:end;
+	        justify-content:flex-end;
 	}
 	
-row.align-top {
-	align-items:flex-start;
+row.cbui-align-top {
+	-webkit-box-align:start;
+	-webkit-align-items:flex-start;
+	    -ms-flex-align:start;
+	        align-items:flex-start;
 	}
+
+row.cbui-align-left {
+	-webkit-box-pack:start;
+	-webkit-justify-content:flex-start;
+	    -ms-flex-pack:start;
+	        justify-content:flex-start;
+	}
+
+.cbui-margin-top1 { margin-top:1rem; }
+.cbui-margin-top2 { margin-top:1.5rem; }
+.cbui-margin-top3 { margin-top:2rem; }
+.cbui-margin-top4 { margin-top:2.5rem; }
+.cbui-margin-top5 { margin-top:3rem; }
 
 /* Modules -------------------------------------------------------- */
 nav a:link {
@@ -272,7 +368,7 @@ nav a:visited {color:#333;}
 nav a:hover {color: #cc2a2e;}
 nav a:active {color: #333;}
 nav a.has-menu {margin: 0 0 0 .5rem;}
-nav a.has-menu::after{  /* this inserts the caret (triangle) displayed after nav items with ".has_menu"  */
+nav a.has-menu:after {  /* this inserts the caret (triangle) displayed after nav items with ".has_menu"  */
 	font-family:FontAwesome;
 	content: "\f0d7";
 	font-size: .9rem;  
@@ -280,13 +376,16 @@ nav a.has-menu::after{  /* this inserts the caret (triangle) displayed after nav
 	position:absolute;
 	top: 29%;
 	right: 0px;
-}
+	}
 header .cbui-logobug {
 	margin: 0 .5rem 0 0;
-}
+	}
 header h1 {
-	flex:2 1 auto;
-}
+	-webkit-box-flex:2;
+	-webkit-flex:2 1 auto;
+	    -ms-flex:2 1 auto;
+	        flex:2 1 auto;
+	}
 header a:link {
 	font-size:0.9375rem; 
 	font-weight:500; 
@@ -294,23 +393,23 @@ header a:link {
 	margin:0 -.5rem 0 .5rem;
 	white-space:nowrap;
 	padding: .5rem;
-}
+	}
 header a:visited {
 	background-color:transparent;
 	color:#fff;
-}
+	}
 header a:hover {
 	background-color:#8EB7E6;
 	color:#fff;
-}
+	}
 header a:active {
 	background-color:#689FDE;
-}
+	}
 menu h3:first-child {
 	margin-top:0;
-}
+	}
 menu a {
 	display:block;
 	padding:.2rem 0;
 	margin:.2rem 0;
-}
+	}
