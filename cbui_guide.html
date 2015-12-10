@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Couchbase User Interface Guide</title>
+<link href="base.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<nav>
+	<a href="#" class="has-menu">Cluster</a> <a href="#">Servers</a> <a href="#" class="has-menu">Data</a>
+</nav>
+<header>
+	<img src="cb_logo_bug_white.svg" alt="Couchbase" width="44px" class="cbui-logobug"/>
+	<h1>CBUI Guide > Layout Elements</h1>
+    <div><a href="#">ACTION 1</a> <a href="#">ACTION 2</a></div>
+</header>
+<main>
+	<menu>
+    <h3>Base Styles</h3> 
+      <a href="#">tbd</a>
+    <h3>Layout Elements</h3>
+      <a href="#" class="disabled_link">Row Element</a>
+      <a href="#">tbd</a>
+      <a href="#">tbd</a>
+      <a href="#">tbd</a>
+    <h3>Modules</h3>
+      <a href="#">tbd</a>
+      <a href="#">tbd</a>
+    </menu>
+    <section>
+        <h2>CBUI Row</h2>
+        <p>The &lt;row&gt; element is the basic Flexbox container for elements on a single row, especially multiple elements requiring left AND right horizontal alignment. </p>
+        
+        <ul>
+        	<li>Rows can and should be stacked as needed and to create pseudo-tables/data grids.</li>
+            <li>Rows reside inside a &lt;section&gt; element &mdash; flex item of parent flexbox &lt;main&gt; which governs their gross position on the page relevant to other major page elements.</li> 
+            <li>Rows have helper classes for simple modifications to their internal layout rules like <em>align-right</em> & <em>align-top</em>.</li>
+            </ul>
+        <p>&nbsp;</p>
+        <row  class="cbui-debug-outline">
+        <span>Element auto-aligned left</span>
+        <span>Element auto-aligned right</span>
+        </row>
+        <p>&nbsp;</p>
+        <p><strong>HTML Markup</strong></p>
+        <pre>
+  &lt;row&gt;
+  &lt;span&gt;Element auto-aligned left&lt;/span&gt;
+  &lt;span&gt;Element auto-aligned right&lt;/span&gt;
+  &lt;/row&gt;</pre>
+        
+        <p><strong>CSS</strong></p>
+        <pre>
+  row {
+  padding: .4rem 0;
+  display:flex;
+  min-height: 1.5rem;
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+  align-items:center;
+  flex-wrap:no-wrap;
+  justify-content:space-between;
+  }
+  		</pre>
+ 
+ 		<row class="cbui-debug-outline">
+        	<span>Element auto-aligned left</span>
+        	<span>Element auto-aligned middle</span>
+        	<span>Element auto-aligned right</span>
+ 		</row>
+  		<row class="cbui-debug-outline">
+        	<span>Single element auto-aligned left</span>
+ 		</row>
+        
+    </section>
+    
+</main>
+
+<footer>footer</footer>
+
+</body>
+</html>

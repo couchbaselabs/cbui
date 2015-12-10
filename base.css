@@ -1,0 +1,316 @@
+/* BASE RESET
+---------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font-weight:normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* EMBEDDED FONTS - Opens Sans (http://www.fontsquirrel.com/license/open-sans) + 
+Font Awesome (https://fortawesome.github.io/Font-Awesome/license/)
+---------------------------------------------------------------------------- */
+
+/* Regular */
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans-Italic-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Light */
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Light-webfont.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Semibold */
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Semibold-webfont.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans-Bold-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Bold-webfont.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+	
+/* icon font ---------------------- */
+@font-face {
+    font-family:'FontAwesome';
+    src: url('fonts/fontawesome-webfont.woff?v=3.2.1') format('woff'),
+        url('fonts/fontawesome-webfont.ttf?v=3.2.1') format('truetype');
+}
+
+/* BODY BASE STYLES 
+-------------------------------------------------------------------------- */
+
+html, button, input, select, textarea {
+	font-family: OpenSans, sans-serif;
+	font-size: 16px;
+}
+body {
+  background-color: #fff;
+  color: #222;
+}
+
+
+/* BASE TYPOGRAPHY
+---------------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+	display:inline-block;
+	font-weight:normal;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+.icon {
+    font-family:FontAwesome;
+}
+p {
+	margin: .4rem 0;
+	line-height: 1.5;
+	max-width:640px;
+	display:block;
+}
+strong {
+	font-weight:700;
+	}
+h1 {
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 1;
+	margin: 0;
+	letter-spacing: 0;
+}
+h2 {
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1.5;
+	margin: 0;
+	letter-spacing: 0;
+	display:block;
+}
+h3 {
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1;
+	margin: 1rem 0 .4rem 0;
+	color: #555;
+}
+h4 {
+	font-size: .8rem;
+	font-weight: 500;
+	line-height: 1;
+	margin: 0.25rem 0;
+} 
+
+/* Links Base Style ------------------------------ */
+a:active,
+a:hover {
+	outline: 0;
+	}
+a {
+	text-decoration:none;
+	}
+
+a:link {
+  	text-decoration:none;
+  	color: #3C7AC2; 
+	}
+a:visited {
+  	text-decoration:none;
+  	color: #3C7AC2; 
+	}
+a:hover {
+  	color: #cc2a2e;
+	}
+a:active {
+  	color: #333;
+	}
+.disabled_link {
+	color: rgba(60,122,194,.60);
+	}
+/* OTHER ELEMENTS
+---------------------------------------------------------------------- */
+ul {
+    list-style: initial;
+    margin: initial;
+    padding: 0 0 0 40px;
+	max-width:600px;
+	}
+
+li {
+    display: list-item;
+	}
+	
+/* BASE LAYOUT  
+---------------------------------------------------------------------- */
+nav {
+	text-align:right;
+	padding:0 1.5rem;
+}
+header {
+	display:flex; 
+	flex-wrap:no-wrap;
+	justify-content:flex-start; 	
+	align-items: center; /* this is really "vertical-align:middle" since the default axis is horizontal */
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center; 
+	background-color: #4287D6;
+	padding:1rem 1.5rem;
+	color:#fff;
+}
+main {
+	display:flex; 
+	flex-wrap:no-wrap; 
+	align-items:flex-start;
+	padding: 1.5rem;
+}
+nav,
+header,
+main
+	{
+	margin:0 auto;
+	max-width:1600px;
+	}
+menu {
+	flex:0 0 160px; 
+	border-left:1px solid #ddd; 
+	padding:0 0 0 1rem;
+	margin: 0 1.5rem 0 -1rem;
+	}
+section {
+	flex: 1 1 auto; 
+	}
+row {
+	padding: .4rem 0;
+	display:flex;
+	min-height: 1rem;
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	align-items:center;
+	flex-wrap:no-wrap;
+	justify-content:space-between;
+	}
+	
+footer {
+	text-align:center;
+	padding: .5rem 0; 
+	width:100%;
+	background-color:#ECF3FA;
+	position:fixed;
+	bottom:0;
+	font-size:70%;
+	}
+
+/* LAYOUT HELPERS 
+------------------------------------------------------------------- */
+
+.cbui-debug-outline {
+	border: 1px dashed red;
+	}
+
+.cbui-column50 {
+	flex: 1 0 50%;
+	}	
+
+row.align-right {
+	justify-content:flex-end;
+	}
+	
+row.align-top {
+	align-items:flex-start;
+	}
+
+/* Modules -------------------------------------------------------- */
+nav a:link {
+	font-weight: 500;
+	color: #333;
+	line-height: 1;
+	padding: .4rem .8rem .4rem 0;
+	margin: 0 0 0 1rem;
+	position:relative;
+}
+nav a:visited {color:#333;}
+nav a:hover {color: #cc2a2e;}
+nav a:active {color: #333;}
+nav a.has-menu {margin: 0 0 0 .5rem;}
+nav a.has-menu::after{  /* this inserts the caret (triangle) displayed after nav items with ".has_menu"  */
+	font-family:FontAwesome;
+	content: "\f0d7";
+	font-size: .9rem;  
+	color: #222;
+	position:absolute;
+	top: 29%;
+	right: 0px;
+}
+header .cbui-logobug {
+	margin: 0 .5rem 0 0;
+}
+header h1 {
+	flex:2 1 auto;
+}
+header a:link {
+	font-size:0.9375rem; 
+	font-weight:500; 
+	color:#fff;
+	margin:0 -.5rem 0 .5rem;
+	white-space:nowrap;
+	padding: .5rem;
+}
+header a:visited {
+	background-color:transparent;
+	color:#fff;
+}
+header a:hover {
+	background-color:#8EB7E6;
+	color:#fff;
+}
+header a:active {
+	background-color:#689FDE;
+}
+menu h3:first-child {
+	margin-top:0;
+}
+menu a {
+	display:block;
+	padding:.2rem 0;
+	margin:.2rem 0;
+}
