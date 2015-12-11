@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Some Flexbox Usefullness</title>
+<link href="base.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<nav>
+	<a href="#" class="has-menu">Cluster</a> <a href="#">Servers</a> <a href="#" class="has-menu">Data</a>
+</nav>
+<header>
+	<img src="cb_logo_bug_white.svg" alt="Couchbase" width="44px" class="cbui-logobug"/>
+	<h1>CBUI Guide > Flexbox</h1>
+    <div><a href="#">ACTION 1</a> <a href="#">ACTION 2</a></div>
+</header>
+<main>
+	<menu>
+    <h3>Base Styles</h3> 
+      <a href="#">tbd</a>
+    <h3>Layout Elements</h3>
+      <a href="#" class="disabled_link">Row Element</a>
+      <a href="#">tbd</a>
+      <a href="#">tbd</a>
+      <a href="#">tbd</a>
+    <h3>Modules</h3>
+      <a href="#">tbd</a>
+      <a href="#">tbd</a>
+    </menu>
+    <section>
+        <h2>Declaring a flex property for a flex item</h2>
+        <pre>
+          
+  /* 0 0 auto */
+  flex: none;
+  
+  /* One value, unitless number: flex-grow */
+  flex: 2;
+  
+  /* One value, width/height: flex-basis */
+  flex: 10em;
+  flex: 30px;
+  flex: auto;
+  flex: content;
+  
+  /* Two values: flex-grow | flex-basis */
+  flex: 1 30px;
+  
+  /* Two values: flex-grow | flex-shrink */
+  flex: 2 2;
+  
+  /* Three values: flex-grow | flex-shrink | flex-basis */
+  flex: 2 2 10%;
+  
+  /* Global values */
+  flex: inherit;
+  flex: initial;
+  flex: unset;
+        </pre>
+        
+    <img src="flex_space_distribution.png" width="449" height="232" alt=""/> 
+    
+    </section>
+    
+</main>
+
+<!-- <footer>footer</footer>  -->
+
+</body>
+</html>

@@ -41,8 +41,8 @@
         <span>First element auto-aligns left</span>
         <span>Second element auto-aligns right</span>
         </row>
-        <p>&nbsp;</p>
-        <p><strong>HTML Markup</strong></p>
+        
+        <p class="cbui-margin-top2"><strong>HTML Markup</strong></p>
         <pre>
   &lt;row&gt;
   &lt;span&gt;First element auto-aligns left&lt;/span&gt;
@@ -52,14 +52,12 @@
         <p><strong>CSS</strong></p>
         <pre>
   row {
-    padding: .4rem 0;
-    display:flex;
-    min-height: 1.5rem;
-    -webkit-box-align:center;
-    -webkit-align-items:center;
-    align-items:center;
-    flex-wrap:no-wrap;
-    justify-content:space-between;
+      padding: .4rem 0;
+      display: flex;
+      min-height: 1.5rem;
+      align-items: center;
+      flex-wrap: no-wrap;
+      justify-content: space-between;
   }
 
 </pre>
@@ -86,19 +84,19 @@
         <p class="cbui-margin-top2"><strong>How about a collection of form fields?</strong></p>
         
         <div style="width:500px;"> <!-- arbitrary wrapper for width -->
-        <row>
+        <row class="cbui-debug-outline">
         <label>Field Number One 
         <input type="text"></label>
         <label>Field Number Two 
         <input type="text"></label>
         </row>
-        <row>
+        <row class="cbui-debug-outline">
         <label>Field Number Three 
         <input type="text" placeholder="I'm a placeholder"></label>
         <label>Field Number Four 
         <input type="text"></label>
         </row>
-        <row class="cbui-align-left">
+        <row class="cbui-align-left cbui-debug-outline">
         <label class="cbui-cursor-pointer">
         <input type="checkbox"> Checking me!</label>
         <label class="cbui-cursor-pointer">
@@ -107,7 +105,7 @@
         <input type="checkbox"> I'm the best!</label>
         </row>
         </div>
-    <p><strong>HTML Markup</strong></p>
+    <p class="cbui-margin-top2"><strong>HTML Markup</strong></p>
         <pre>
   &lt;row&gt;
   &lt;label&gt;Field Number One 
